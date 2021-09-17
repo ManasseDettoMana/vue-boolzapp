@@ -1,0 +1,15 @@
+#background{
+    height: 100vh;
+}
+#bg_page_green{
+    background-color: rgb(1, 145, 125);
+    height: 20%;
+    width: 100%;
+}
+
+#bg_page_grey{
+    background-color: lightgrey;
+    height: 80%;
+    width: 100%;
+
+}
