@@ -20,7 +20,10 @@ div{
     background-color: lightgrey;
     height: 80%;
     width: 100%;
+}
 
+.bg_l_gray{
+    background-color: rgb(238, 231, 231);
 }
 
 #chat_container{
@@ -43,6 +46,7 @@ div{
 #searchbar{
     height: 40px;
 }
+
 .height_70{
     height: 70px;
 }
@@ -87,8 +91,12 @@ i{
     transform: scale(1.2);
 }
 #notifications p{
-    margin: 0;
-
+    margin-left: 30px;
+    margin-bottom: 0;
+}
+#notifications a{
+    color: grey;
+    text-decoration: underline;
 }
 
 .flex_center{
@@ -142,4 +150,8 @@ i{
 #searchbar input{
     width: 95%;
     border: 1px solid lightgrey;
+}
+
+#chat_list .row{
+    border-top:1px solid lightgrey;
 }
