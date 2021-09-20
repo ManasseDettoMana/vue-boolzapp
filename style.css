@@ -1,5 +1,5 @@
 div{
-    border: 1px solid black
+    /* border: 1px solid black */
 }
 
 #root{
@@ -51,10 +51,13 @@ div{
 } */
 
 i{
-    transform: scale(1.3);
+    transform: scale(1.2);
     color: rgb(190, 190, 190);
 }
-
+#user_icons i{
+    margin-right: 20px;
+    cursor: pointer;
+}
 #chat_list{
     height:calc(100% - 180px);
     
@@ -126,3 +129,11 @@ i{
 
 }
 
+#search_icon{
+    border:1px solid lightgrey;
+    height: 70%;
+}
+#searchbar input{
+    width: 95%;
+    border: 1px solid lightgrey;
+}
