@@ -61,7 +61,7 @@ i{
 #chat_list{
     height:calc(100% - 180px);
     
-    background-color: red;
+    /* background-color: red; */
 }
 
 
@@ -131,7 +131,13 @@ i{
 
 #search_icon{
     border:1px solid lightgrey;
-    height: 70%;
+    /* height: 70%; */
+    /* width: 20%; */
+}
+#search_icon button{
+    width: 100%;
+    background-color: white;
+    border: 1px solid white;
 }
 #searchbar input{
     width: 95%;
