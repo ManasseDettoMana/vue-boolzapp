@@ -22,60 +22,7 @@
         </div>
         
         <div id="chat_container">
-            <!-- <div id="chats" >
-                <div>
-                    <div class="row">
-                        
-                        <div class="col-5 height_70" id="barra_utente">
-                            <img src="img/avatar_io.jpg" alt="">
-                            <span>Manasse</span>
-                            <i class="fas fa-circle-notch"></i>
-                            <i class="fas fa-comment-alt"></i>
-                            <i class="fas fa-ellipsis-v"></i>
-                        </div>
-                        <div class="col-7 height_70">
-                            
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-5 height_70 flex_center" id="notifications">
-                            <span id="campanella"><i class="fas fa-bell-slash"></i></span>
-                            <div>
-    
-                                <p>Ricevi notifiche di nuovi messaggi</p>
-                                <p>Attiva notifiche desktop</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-5" id="searchbar">
-    
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="chat_list" class="col-5">
-                    
-                    <div>
-                        <div class="row" v-for='(chat,index) in contacts'>
-                            <div class="col-5 height_70 flex_center" @click=''>
-                                <img src='img/avatar_1.jpg' alt="">
-                                <h3>{{contacts[index].name}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <div id="chat_text" class="col-7">
-                    <div id="messaggi">
-                        
-                    </div>
-                </div>
-            </div> -->
-
+            
             <div class="row" id="container_left_right">
                 <!-- LEFT CONTAINER  -->
                 <div class="col-5" id="left_container">
@@ -115,7 +62,7 @@
                             <input type="text" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
-
+                    <!-- LISTA CHATS  -->
                     <div id="chat_list">
                         <div class="row height_70" v-for='(chat, index) in contacts'>
                             <div class="col-8">
@@ -127,14 +74,44 @@
                     </div>
                 </div>
 
-
+                <!-- RIGHT CONTAINER  -->
                 <div class="col-7" id="right_container">
+                    <!-- nome chat  -->
+                    <div class="row height_70 bg_l_gray" >
+                        <!-- Nome  -->
+                        <div class="col-6"></div>
+                        <!-- icons  -->
+                        <div class="col-6 d-flex justify-content-end align-items-center" id="right_icons">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
 
-                    <div class="row height_70 bg_l_gray" ></div>
+                    <!-- messaggi  -->
+                    <div id="chat_text">
 
-                    <div id="chat_text"></div>
+                        <div></div>
 
-                    <div id="text_area" class="height_70 bg_l_gray"></div>
+
+
+
+                    </div>
+
+
+
+                    <!-- casella testo  -->
+                    <div id="text_area" class="height_70 bg_l_gray row">
+                        <div class="col-1 d-flex justify-content-center align-items-center">
+                            <i class="far fa-smile"></i>
+                        </div>
+                        <div class="col-10 d-flex justify-content-center align-items-center">                          
+                            <input type="text" placeholder="Scrivi un messaggio">
+                        </div>
+                        <div class="col-1 d-flex justify-content-center align-items-center">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 

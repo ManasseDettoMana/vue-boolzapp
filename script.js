@@ -88,8 +88,9 @@ let app = new Vue(
                     ],
                 },
             ],
-            // fine array
-
+        },
+        methods:{
+            
         }
     }
 );

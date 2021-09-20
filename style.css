@@ -1,6 +1,3 @@
-div{
-    /* border: 1px solid black */
-}
 
 #root{
     height: 100vh;
@@ -40,7 +37,6 @@ div{
     margin: 0;
 }
 .row div{
-    /* background-color: white; */
     padding: 0;
 }
 #searchbar{
@@ -50,13 +46,11 @@ div{
 .height_70{
     height: 70px;
 }
-/* #barra_utente i{
-    text-align: right; 
-} */
 
 i{
     transform: scale(1.2);
     color: rgb(190, 190, 190);
+    cursor: pointer;
 }
 #user_icons i{
     margin-right: 20px;
@@ -64,22 +58,17 @@ i{
 }
 #chat_list{
     height:calc(100% - 180px);
-    
-    /* background-color: red; */
+    overflow-y: scroll;
 }
-
-
-/* #chat-list,
-#chat_text{
-   overflow: auto;
-} */
+#chat_list .row{
+    cursor: pointer;
+}
 
 #chat_text{
     height: calc(100% - 140px); 
     background-image: url(../vue-boolzapp/img/mine.jpg);  
     overflow-y: scroll;
 }
-
 
 #campanella{
     padding: 10px;
@@ -98,14 +87,6 @@ i{
     color: grey;
     text-decoration: underline;
 }
-
-.flex_center{
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-}
-
-
 #notifications{
     background-color: rgb(129, 209, 255);
 }
@@ -139,8 +120,6 @@ i{
 
 #search_icon{
     border:1px solid lightgrey;
-    /* height: 70%; */
-    /* width: 20%; */
 }
 #search_icon button{
     width: 100%;
@@ -154,4 +133,15 @@ i{
 
 #chat_list .row{
     border-top:1px solid lightgrey;
+}
+
+#text_area input{
+    width: 100%;
+    height: 75%;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+#right_icons i{
+    margin-right: 20px;
+
 }
