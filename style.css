@@ -1,3 +1,7 @@
+div{
+    border: 1px solid black
+}
+
 #root{
     height: 100vh;
     position: relative;
@@ -21,14 +25,104 @@
 
 #chat_container{
     width: 85%;
-    height: 90%;
+    height: 95%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
+    background-color: white;
 }
-#chats{
+.row{
     width: 100%;
-    height: 100%;
-    background-color: rebeccapurple;
+    margin: 0;
 }
+.row div{
+    /* background-color: white; */
+    padding: 0;
+}
+#searchbar{
+    height: 40px;
+}
+.height_70{
+    height: 70px;
+}
+/* #barra_utente i{
+    text-align: right; 
+} */
+
+i{
+    transform: scale(1.3);
+    color: rgb(190, 190, 190);
+}
+
+#chat_list{
+    height:calc(100% - 180px);
+    
+    background-color: red;
+}
+
+
+/* #chat-list,
+#chat_text{
+   overflow: auto;
+} */
+
+#chat_text{
+    height: calc(100% - 140px); 
+    background-image: url(../vue-boolzapp/img/mine.jpg);  
+    overflow-y: scroll;
+}
+
+
+#campanella{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+#campanella i{
+    color: rgb(129, 209, 255);
+    transform: scale(1.2);
+}
+#notifications p{
+    margin: 0;
+
+}
+
+.flex_center{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+#notifications{
+    background-color: rgb(129, 209, 255);
+}
+
+#notifications div{
+    background-color: rgb(129, 209, 255);
+
+}
+
+.row img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.row h3{
+    display: inline-block;
+    font-size: 1.3em;
+}
+
+#container_left_right{
+    height: 100%;
+}
+#left_container{
+    height: 100%;
+}
+
+#right_container{
+    height: 100%;
+
+}
+
