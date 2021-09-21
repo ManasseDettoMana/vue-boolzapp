@@ -64,9 +64,9 @@
                     </div>
                     <!-- LISTA CHATS  -->
                     <div id="chat_list">
-                        <div class="row height_70" v-for='(chat, index) in contacts'>
-                            <div class="col-8">
-                                <img src="img/avatar_1.jpg" alt="">
+                        <div class="row height_70" v-for='(chat, index) in contacts' @click='chatSelezionata(index)'>
+                            <div class="col-8 d-flex align-items-center">
+                                <img :src="'img/avatar' + chat.avatar + '.jpg'" alt="">
                                 <h3>{{contacts[index].name}}</h3>
                             </div>
                             <div class="col-4"></div>
@@ -89,13 +89,11 @@
                     </div>
 
                     <!-- messaggi  -->
-                    <div id="chat_text">
-
-                        <div></div>
-
-
-
-
+                    <div id="chat_text" class="d-flex flex-column">
+                        
+                        <div v-for="(messaggio, index) in contacts[selectedChat].messages" class="message d-flex justify-content-center align-items-center" :class="messaggio.status">
+                            <span>{{messaggio.text}}</span>
+                        </div>
                     </div>
 
 
@@ -114,12 +112,8 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
     </div>
-
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

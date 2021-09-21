@@ -131,9 +131,9 @@ i{
     border: 1px solid lightgrey;
 }
 
-#chat_list .row{
+/* #chat_list .row{
     border-top:1px solid lightgrey;
-}
+} */
 
 #text_area input{
     width: 100%;
@@ -144,4 +144,19 @@ i{
 #right_icons i{
     margin-right: 20px;
 
+}
+.message{
+    height: 45px;
+    /* display: inline-block; */
+    border-radius: 5px;
+    width: 350px;
+}
+.received{
+    background-color: white;
+    justify-content: left;
+}
+.sent{
+    background-color: #72e962;
+    justify-content:right;
+   
 }

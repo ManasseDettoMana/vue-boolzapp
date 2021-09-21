@@ -1,4 +1,4 @@
-let app = new Vue(
+let root = new Vue(
     {
         el:'#root',
         data: {
@@ -88,9 +88,13 @@ let app = new Vue(
                     ],
                 },
             ],
+            selectedChat: 0,
         },
         methods:{
-            
+            chatSelezionata : function(elementIndex){
+                this.selectedChat = elementIndex;
+                console.log(this.selectedChat);
+            }
         }
     }
 );
