@@ -79,7 +79,10 @@
                     <!-- nome chat  -->
                     <div class="row height_70 bg_l_gray" >
                         <!-- Nome  -->
-                        <div class="col-6"></div>
+                        <div class="col-6">
+                            <img :src="'img/avatar' + contacts[selectedChat].avatar + '.jpg'" alt="">
+                            <h3>{{contacts[selectedChat].name}}</h3>
+                        </div>
                         <!-- icons  -->
                         <div class="col-6 d-flex justify-content-end align-items-center" id="right_icons">
                             <i class="fas fa-search"></i>
@@ -90,8 +93,7 @@
 
                     <!-- messaggi  -->
                     <div id="chat_text" class="d-flex flex-column">
-                        
-                        <div v-for="(messaggio, index) in contacts[selectedChat].messages" class="message d-flex justify-content-center align-items-center" :class="messaggio.status">
+                        <div v-for="(messaggio, index) in contacts[selectedChat].messages" class="message d-flex align-items-center" :class="messaggio.status">
                             <span>{{messaggio.text}}</span>
                         </div>
                     </div>

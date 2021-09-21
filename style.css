@@ -147,16 +147,12 @@ i{
 }
 .message{
     height: 45px;
-    /* display: inline-block; */
     border-radius: 5px;
     width: 350px;
 }
 .received{
     background-color: white;
-    justify-content: left;
 }
 .sent{
     background-color: #72e962;
-    justify-content:right;
-   
 }
