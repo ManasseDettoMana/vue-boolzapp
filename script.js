@@ -89,9 +89,10 @@ let root = new Vue(
                 },
             ],
             selectedChat: 0,
-            // lastMessages = '',
+            lastMessages: ,
             chatField:'',
             searchChatField: '',
+            n: this.contacts[index].messages.length,
         },
         methods:{
             chatSelezionata : function(elementIndex){
@@ -115,8 +116,12 @@ let root = new Vue(
                 function search(item) {
                     return item.name.substring(0, key.length) == key;
                 }
-                
-            }           
+
+            },
+            // lastMessage: function(index){
+            //     let n = this.contacts[index].messages.length;
+            //     this.lastMessages = this.contacts[index].messages[n-1];
+            // }      
         }
     }
 );
