@@ -110,7 +110,16 @@ let root = new Vue(
                 console.log(a);
                 this.contacts[index].messages.push(a);
                 this.chatField = '';
-   
+
+                setTimeout(() => {
+                    let b = {
+                        date: d.getDate() + '/' + d.getMonth() + '/' + d.getFullYear() + ' ' + d.getHours() + ':' + d.getMinutes + ':' + d.getSeconds(),
+                        text: 'ok bro!',
+                        status: 'received'
+                    };
+                    this.contacts[index].messages.push(b);
+                }, 1000);
+                
             },
             searchChat: function(){
 
