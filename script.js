@@ -75,7 +75,7 @@ let root = new Vue(
                     avatar: '_4',
                     visible: true,
                     messages: [
-                        {
+                        { 
                             date: '10/01/2020 15:30:55',
                             text: 'Lo sai che ha aperto una nuova pizzeria?',
                             status: 'sent'
@@ -89,12 +89,34 @@ let root = new Vue(
                 },
             ],
             selectedChat: 0,
+            // lastMessages = '',
+            chatField:'',
+            searchChatField: '',
         },
         methods:{
             chatSelezionata : function(elementIndex){
                 this.selectedChat = elementIndex;
                 console.log(this.selectedChat);
-            }
+                // this.lastMessages = this.contacts[this.selectedChat].messages.length;
+            },
+            addMessages: function(index){
+                this.contacts[index].messages.push(this.chatField);
+
+                console.log(this.contacts[index].messages);
+                this.chatField = '';
+
+                
+            },
+            searchChat: function(){
+                var key = this.searchChatField;
+
+                var result = contacts.filter(search);
+
+                function search(item) {
+                    return item.name.substring(0, key.length) == key;
+                }
+                
+            }           
         }
     }
 );

@@ -131,10 +131,6 @@ i{
     border: 1px solid lightgrey;
 }
 
-/* #chat_list .row{
-    border-top:1px solid lightgrey;
-} */
-
 #text_area input{
     width: 100%;
     height: 75%;
@@ -145,14 +141,29 @@ i{
     margin-right: 20px;
 
 }
+.message:first-of-type{
+    margin-top: 50px;
+}
 .message{
-    height: 45px;
+    height: 6%;
     border-radius: 5px;
-    width: 350px;
+    width: 30%;
+    padding: 10px;
+    margin-top: 10px;
 }
 .received{
     background-color: white;
+    margin-left: 10%;
 }
 .sent{
     background-color: #72e962;
+    margin-left: 60%;
+}
+.message span{
+    padding-left: 5%;
+    font-size: 0.9em;
+}
+
+.active{
+    background-color: lightgrey;
 }
