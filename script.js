@@ -101,9 +101,9 @@ let root = new Vue(
                 // this.lastMessages = this.contacts[this.selectedChat].messages.length;
             },
             addMessages: function(index){
-                
+                var d = new Date();
                 let a = {
-                    date: '',
+                    date: d.getDate() + '/' + d.getMonth() + '/' + d.getFullYear() + ' ' + d.getHours() + ':' + d.getMinutes + ':' + d.getSeconds(),
                     text: this.chatField,
                     status: 'sent'
                 }
