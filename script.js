@@ -89,10 +89,10 @@ let root = new Vue(
                 },
             ],
             selectedChat: 0,
-            lastMessages: ,
+            lastMessages: '',
             chatField:'',
             searchChatField: '',
-            n: this.contacts[index].messages.length,
+            // n: this.contacts[index].messages.length,
         },
         methods:{
             chatSelezionata : function(elementIndex){
@@ -101,9 +101,14 @@ let root = new Vue(
                 // this.lastMessages = this.contacts[this.selectedChat].messages.length;
             },
             addMessages: function(index){
-                this.contacts[index].messages.push(this.chatField);
-
-                console.log(this.contacts[index].messages);
+                
+                let a = {
+                    date: '',
+                    text: this.chatField,
+                    status: 'sent'
+                }
+                console.log(a);
+                this.contacts[index].messages.push(a);
                 this.chatField = '';
 
                 
