@@ -68,6 +68,7 @@ i{
     height: calc(100% - 140px); 
     background-image: url(../vue-boolzapp/img/mine.jpg);  
     overflow-y: scroll;
+    padding: 0 20px;
 }
 
 #campanella{
@@ -145,23 +146,24 @@ i{
     margin-top: 50px;
 }
 .message{
-    height: 6%;
-    border-radius: 5px;
-    width: 30%;
-    padding: 10px;
+
     margin-top: 10px;
 }
-.received{
-    background-color: white;
-    margin-left: 10%;
-}
+
 .sent{
-    background-color: #72e962;
-    margin-left: 60%;
+    justify-content: flex-end;
 }
 .message span{
-    padding-left: 5%;
     font-size: 0.9em;
+    padding: 10px 25px;
+    border-radius: 5px;
+    max-width: 250px;
+}
+.message.received span{
+    background-color: white;
+}
+.message.sent span{
+    background-color: #72e962;
 }
 
 .active{

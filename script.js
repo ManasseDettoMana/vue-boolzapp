@@ -110,23 +110,19 @@ let root = new Vue(
                 console.log(a);
                 this.contacts[index].messages.push(a);
                 this.chatField = '';
-
-                
+   
             },
             searchChat: function(){
-                var key = this.searchChatField;
 
-                var result = contacts.filter(search);
+                this.contacts.forEach(element =>{
 
-                function search(item) {
-                    return item.name.substring(0, key.length) == key;
-                }
-
+                    if(element.name.toLowerCase().includes(this.searchChatField.toLowerCase())){
+                        element.visible = true;
+                    }else{
+                        element.visible = false;
+                    }
+                });
             },
-            // lastMessage: function(index){
-            //     let n = this.contacts[index].messages.length;
-            //     this.lastMessages = this.contacts[index].messages[n-1];
-            // }      
         }
     }
 );

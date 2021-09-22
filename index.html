@@ -61,17 +61,16 @@
                         </div>
                         <!-- input ricerca  -->
                         <div class="col-10">
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model='searchChatField'>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model='searchChatField' @keyup="searchChat">
                         </div>
                     </div>
                     <!-- LISTA CHATS  -->
                     <div id="chat_list">
-                        <div class="row height_70" v-for='(chat, index) in contacts' @click='chatSelezionata(index)' :class="{active: index == selectedChat}">
-                            <div class="col-8 d-flex align-items-center">
+                        <div class="row height_70" v-for='(chat, index) in contacts ' @click='chatSelezionata(index)' :class="{active: index == selectedChat}" v-if="chat.visible">
+                            <div class="col-8 d-flex align-items-center" >
                                 <img :src="'img/avatar' + chat.avatar + '.jpg'" alt="">
                                 <h3>{{contacts[index].name}}</h3>
-                                <!-- <p>{{lastMessages}}</p> -->
-                                <p><small>{{lastMessages}}</small></p>
+                                <!-- <p><small>{{lastMessages}}</small></p> -->
                             </div>
                             <div class="col-4"></div>
                         </div>
